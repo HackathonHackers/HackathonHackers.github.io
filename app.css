@@ -1,7 +1,20 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
- *    v2.0 | 20110126
- *       License: none (public domain)
- *       */
+@font-face {
+    font-family: 'Dosis';
+    src: url('/fonts/dosis-medium-webfont.eot');
+    src: url('/fonts/dosis-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/dosis-medium-webfont.woff2') format('woff2'),
+         url('/fonts/dosis-medium-webfont.woff') format('woff'),
+         url('/fonts/dosis-medium-webfont.ttf') format('truetype'),
+         url('/fonts/dosis-medium-webfont.svg#dosismedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/**
+ * Eric Meyer's CSS Reset
+ * http://meyerweb.com/eric/tools/css/reset/ 
+ * v2.0 | 20110126
+ * License: none (public domain)
+ **/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -52,4 +65,61 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+a, a:link {
+    color: white;
+}
+
+a:hover, a:focus {
+    color: #EEE;
+}
+
+a:active {
+    color: #CCC;
+}
+
+/**
+ * Hackathon Hackers-specific styling.
+ **/
+
+.page-container {
+    margin: 40px auto;
+    max-width: 480px;
+    width: 100%;
+}
+
+.ico {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+}
+
+.page-main .call-to-action {
+    font: 32px/40px 'Dosis', monospace;
+    text-align: center;
+}
+
+.page-main .note {
+    font: 12px/20px 'Dosis', monospace;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-footer {
+    font: 12px/20px 'Dosis', monospace;
+    text-align: center;
+    margin: 20px 0;
+}
+
+@media (max-width: 960px) {
+    .page-container {
+        margin: 20px auto;
+    }
 }
