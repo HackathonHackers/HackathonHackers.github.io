@@ -1,3 +1,13 @@
+try {
+  var canvas = document.createElement('canvas')
+  var webGLAvailable = !!(window.WebGLRenderingContext && (
+    canvas.getContext('webgl') ||
+    canvas.getContext('experimental-webgl') 
+  ))
+} catch (e) {
+  var webGLAvailable = false
+}
+
 function createIcoGeo() {
   var geo = new THREE.IcosahedronGeometry(100, 0)
 
@@ -16,7 +26,13 @@ function createIcoGeo() {
 }
 
 var scene = new THREE.Scene()
-var renderer = new THREE.WebGLRenderer({ antialias: true })
+
+if (webGLAvailable) {
+  var renderer = new THREE.WebGLRenderer()
+} else {
+  var renderer = new THREE.CanvasRenderer()
+}
+
 renderer.setSize(300, 300)
 
 var camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000)
@@ -34,12 +50,18 @@ var faceMat = new THREE.MeshFaceMaterial([
   new THREE.MeshBasicMaterial({ transparent: true, opacity: 0 })
 ])
 
+if (!webGLAvailable) {
+  outlineMat.overdraw = 0.5
+  wireframeMat.overdraw = 0.5
+  blackMat.overdraw = 0.5
+  faceMat.overdraw = 0.5
+}
+
 var faceMesh = new THREE.Mesh(createIcoGeo(), faceMat)
 var outlineMesh = new THREE.Mesh(createIcoGeo(), outlineMat)
 var panelMesh = new THREE.Mesh(createIcoGeo(), blackMat)
 var wireframeMesh = new THREE.Mesh(createIcoGeo(), wireframeMat)
 
-faceMesh.scale.multiplyScalar(0.99)
 outlineMesh.scale.multiplyScalar(1.1)
 panelMesh.scale.multiplyScalar(0.99)
 
