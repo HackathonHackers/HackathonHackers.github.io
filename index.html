@@ -12,6 +12,13 @@
         <meta property="og:title" content="/join #hackers | Hackathon Hackers Slack" />
         <meta property="og:description" content="The all-inclusive hackathons community is getting a Slack. Make awesome things." />
         <meta property="og:image" content="http://hackathons.com/facebook.png" />
+        <script>
+          if (window.location.protocol === 'https:') {
+            var location = window.location
+
+            location.href = "http:" + location.href.substring(location.protocol.length)
+          }
+        </script>
 
         <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
