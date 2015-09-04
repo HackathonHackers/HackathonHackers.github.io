@@ -119,6 +119,6 @@ a:active {
 
 @media (max-width: 960px) {
     .page-container {
-        margin: 20px auto;
+        margin: 10px auto;
     }
 }
