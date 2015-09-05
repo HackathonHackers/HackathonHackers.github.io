@@ -90,6 +90,10 @@ a:active {
     height: 300px;
 }
 
+.page-main {
+    margin-bottom: 20px;
+}
+
 .page-main .call-to-action {
     font: 32px/40px 'Share Tech Mono', monospace;
     text-align: center;
@@ -98,11 +102,12 @@ a:active {
 .page-main .note {
     font: 18px/20px 'Share Tech Mono', monospace;
     text-align: center;
+    margin: 5px 0 20px;
 }
 
 .page-main iframe {
     display: block;
-    margin: 20px auto 40px;
+    margin: 0 auto;
 }
 
 .page-footer {
