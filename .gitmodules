@@ -1,0 +1,3 @@
+[submodule "hackathons"]
+	path = hackathons
+	url = https://github.com/HackathonHackers/upcoming-hackathons.git
