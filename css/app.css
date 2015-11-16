@@ -1,4 +1,23 @@
 /**
+ * Custom Styles
+ **/
+/* mailchimp form */
+.page-main #mc_embed_signup{
+    clear:left;
+    font:14px Helvetica,Arial,sans-serif;
+    margin: 0 auto;
+}
+.page-main #mc_embed_signup_scroll h2{
+    text-align:center;
+}
+.page-main #mc_embed_signup .center{
+    text-align:center;
+}
+.page-main #mc_embed_signup .mc-field-group {
+    margin:auto;
+    width:70%;
+}
+/**
  * Eric Meyer's CSS Reset
  * http://meyerweb.com/eric/tools/css/reset/ 
  * v2.0 | 20110126
