@@ -129,6 +129,10 @@ a:active {
     margin: 0 auto;
 }
 
+.__slackin {
+  width: 173px !important;
+}
+
 .page-footer {
     font: 12px/20px 'Share Tech Mono', monospace;
     text-align: center;
