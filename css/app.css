@@ -124,6 +124,11 @@ a:active {
     margin: 5px 0 20px;
 }
 
+.page-main .description {
+    font: 18px/20px 'Share Tech Mono', monospace;
+    margin: 10px 0 30px;
+}
+
 .page-main iframe {
     display: block;
     margin: 0 auto;
